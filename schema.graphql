@@ -1,6 +1,21 @@
-type ExampleEntity @entity {
-  id: ID!
-  count: BigInt!
-  owner: Bytes! # address
-  spender: Bytes! # address
+type TransferEvent @entity {
+id: ID!
+
+" Quantity of tokens transferred "
+amount: BigDecimal!
+
+" Transaction sender address "
+sender: Bytes!
+
+" Address of destination account "
+destination: Bytes!
+
+" Block number "
+block: BigInt!
+
+" Event timestamp "
+timestamp: BigInt!
+
+" Transaction hash "
+transaction: Bytes!
 }
